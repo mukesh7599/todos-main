@@ -1,0 +1,350 @@
+<<<<<<< HEAD
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* Light Theme */
+  --color-very-light-gray: hsl(0, 0%, 98%);
+  --color-very-light-grayish-blue: hsl(236, 33%, 92%);
+  --color-light-grayish-blue: hsl(233, 11%, 84%);
+  --color-dark-grayish-blue: hsl(236, 9%, 61%);
+  --color-very-dark-grayish-blue: hsl(235, 19%, 35%);
+  --color-gradient-start: hsl(192, 100%, 67%);
+  --color-gradient-end: hsl(280, 87%, 65%);
+
+  /* Dark Theme */
+  --color-very-dark-blue: hsl(235, 21%, 11%);
+  --color-very-dark-desaturated-blue: hsl(235, 24%, 19%);
+  --color-dark-light-grayish-blue: hsl(234, 39%, 85%);
+  --color-dark-light-grayish-blue-hover: hsl(236, 33%, 92%);
+  --color-dark-dark-grayish-blue: hsl(234, 11%, 52%);
+  --color-dark-very-dark-grayish-blue: hsl(233, 14%, 35%);
+  --color-dark-very-dark-grayish-blue-hover: hsl(237, 14%, 26%);
+}
+html {
+  font-size: 62.5%;
+}
+body,
+input[type="text"],
+button {
+  font-family: "Josefin Sans", sans-serif, "Courier New", Courier, monospace;
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+.mainTheme.light {
+  background-color: var(--color-very-light-gray);
+  background-image: url(./images/bg-desktop-light.jpg);
+  color: var(--color-dark-grayish-blue);
+}
+.mainTheme .light input[type="checkbox"],
+.mainTheme .light button {
+  color: var(--color-dark-grayish-blue);
+}
+.mainTheme.dark {
+  background-color: var(--color-very-dark-blue);
+  background-image: url(./images/bg-desktop-dark.jpg);
+  color: var(--color-dark-dark-grayish-blue);
+}
+.mainTheme{
+  width: 100%;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: contain;
+  height: 100vh;
+}
+.container {
+  max-width: 54rem;
+  margin: 0 auto;
+}
+header {
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4.8rem;
+}
+h1 {
+  font-size: 3.6rem;
+  font-weight: 700;
+}
+
+.btnThemeSwitch {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+.btnThemeSwitch:focus {
+  outline: none;
+}
+.mainTheme.dark .btnThemeSwitch {
+  color: var(--color-dark-dark-grayish-blue);
+}
+.mainTheme.dark .btnThemeSwitch:hover {
+  color: var(--color-dark-very-dark-grayish-blue-hover);
+}
+.checkbox-border-wrap {
+  padding: 0.1rem;
+  background: var(--color-very-light-grayish-blue);
+  border-radius: 50%;
+}
+.mainTheme.dark .checkbox-border-wrap {
+  background: var(--color-dark-very-dark-grayish-blue);
+}
+.checkbox-border-wrap:hover {
+  background: linear-gradient(
+    to bottom right,
+    var(--color-gradient-start),
+    var(--color-gradient-end)
+  );
+}
+.checkbox {
+  display: flex;
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: inherit;
+  background-color: white;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.mainTheme.light .todo-input{
+background-color: white;
+}
+.mainTheme.dark .checkbox,
+.mainTheme.dark .todo-input {
+  background-color: var(--color-very-dark-desaturated-blue);
+}
+
+.form-control {
+  display: flex;
+  justify-content: stretch;
+  align-items: center;
+  background-color: white;
+  width: 100%;
+  height: 6.4rem;
+  padding: 2.4rem;
+  gap: 2.4rem;
+  border-radius: 1rem;
+  margin-bottom: 2.4rem;
+}
+
+.mainTheme.dark .form-control {
+  background-color: var(--color-very-dark-desaturated-blue);
+}
+.form-control form {
+  width: 100%;
+}
+.todo-input {
+  font-size: 1.8rem;
+  border: none;
+  color: var(--color-dark-dark-grayish-blue) ;
+}
+.todo-input:focus {
+  outline: none;
+}
+/* #submitNewTodo */
+.form-control form label
+{
+  display: none;
+}
+.form-control form .todo-input {
+  width: 100%;
+}
+.mainTheme .todo-input {
+  background-color: var(--color-very-dark-desaturated-blue);
+}
+.mainTheme .btnThemeSwitch {
+  color: var(--color-dark-dark-grayish-blue);
+}
+.mainTheme .btnThemeSwitch:hover {
+  color: var(--color-dark-very-dark-grayish-blue-hover);
+}
+
+
+.filter-control-for-mobile {
+  display: none;
+}
+ .todo-list-section {
+  background-color: white;
+  border-radius: 1rem;
+  margin-bottom: 4.8rem;
+  box-shadow: -1px 5px 20px 10px rgba(157, 162, 235, 0.3);
+  -webkit-box-shadow: -1px 5px 20px 10px rgba(157, 162, 235, 0.3);
+  -moz-box-shadow: -1px 5px 20px 10px rgba(157, 162, 235, 0.3);
+  overflow-y: scroll;
+  /* z-index: 1; */
+  height: calc(59vh - 68px);
+  position: relative;
+  
+} 
+.mainTheme.dark .todo-list-section { 
+  background-color: var(--color-very-dark-desaturated-blue);
+  border-radius: 1rem 1rem 0 0;
+  box-shadow: -1px 5px 20px 10px rgba(37, 39, 60, 0.2);
+  -webkit-box-shadow: -1px 5px 20px 10px rgba(37, 39, 60, 0.2);
+  -moz-box-shadow: -1px 5px 20px 10px rgba(37, 39, 60, 0.2);
+  overflow-y: scroll;
+  /* z-index: 1; */
+  height: calc(59vh - 68px);
+  position: relative;
+  border-radius: 1rem;
+}
+.todo-list-section::-webkit-scrollbar {
+  width: 4px;
+}
+.todo-list-section::-webkit-scrollbar-thumb {
+    background-color: var(--color-light-grayish-blue);
+    border-radius: 5px;
+}
+.mainTheme.light .btn{
+  background-color: var(--color-very-light-gray);
+  color: var(--color-dark-dark-grayish-blue);
+  border:0;
+}
+.mainTheme.dark .btn {
+  background-color:  var(--color-very-dark-blue);
+  color: var(--color-dark-dark-grayish-blue);
+  border: 0;
+}
+
+
+.todo-list-section .info-text {
+  padding: 2.4rem;
+  border-bottom: 0.1rem solid var(--color-very-light-grayish-blue);
+}
+.todo-list {
+  list-style: none;
+}
+.todo-list li {
+  display: flex;
+  flex-direction: row;
+  height: 6.4rem;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 2.4rem;
+  padding-right: 2.4rem;
+  gap: 2.4rem;
+  border-bottom: 0.1rem solid var(--color-very-light-grayish-blue);
+}
+.todo-list li:last-child {
+  border-bottom: none;
+}
+.mainTheme.dark li {
+  border-bottom-color: var(--color-dark-very-dark-grayish-blue-hover);
+}
+.todo-list li label,
+.todo-list li input[type="checkbox"] {
+  display: none;
+}
+.todo-list li.completed .checkbox-border-wrap {
+  background: transparent;
+}
+.todo-list li.completed .checkbox {
+  background-image: linear-gradient(
+    to bottom right,
+    var(--color-gradient-start),
+    var(--color-gradient-end)
+  );
+}
+.todo-list li.completed p {
+  color: var(--color-light-grayish-blue);
+  text-decoration-line: line-through;
+}
+.mainTheme.dark .todo-list li.completed p {
+  color: var(--color-dark-very-dark-grayish-blue);
+}
+
+.todo-filter-control {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2.4rem;
+  /* border-top: 0.1rem solid var(--color-very-light-grayish-blue); */
+  position: sticky;
+  z-index: 10;
+  bottom: 40px;
+  /* background-color: var(--color-very-dark-desaturated-blue); */
+  border-radius:1rem;
+}
+.mainTheme.light .control-btn.groupl{
+  background-color: white;
+}
+.mainTheme.dark .todo-filter-control {
+  border-top-color: var(--color-dark-very-dark-grayish-blue-hover);
+
+}
+.control-btn.group {
+  display: flex;
+  gap: 1rem;
+}
+.mainTheme.light .btn.active {
+  color:var(--color-very-dark-desaturated-blue);
+  font-weight: 700;
+}
+.mainTheme.dark .btn.active {
+  color: var(--color-gradient-start);
+  font-weight: 700;
+}
+.mainTheme.light .setRemainder,
+.mainTheme.light .activateTodo{
+  border-radius: 5px;
+  border: 1px solid var(  --color-very-light-grayish-blue);
+  color: var(--color-dark-dark-grayish-blue);
+  background-color:var(--color-very-light-gray);
+}
+.mainTheme.dark .setRemainder,
+.mainTheme.dark .activateTodo{
+  border-radius: 5px;
+  border: 1px solid var(--color-dark-dark-grayish-blue);
+  color:var(--color-dark-dark-grayish-blue);
+  background-color:var(--color-very-dark-desaturated-blue);
+}
+=======
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+>>>>>>> 1d89e21 (Initialize project using Create React App)
